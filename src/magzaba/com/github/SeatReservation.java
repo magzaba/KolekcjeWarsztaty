@@ -1,5 +1,7 @@
 package magzaba.com.github;
 
+import java.util.Collections;
+import java.util.List;
 
 //zadanie 1
 // zaimplementuj klasę Compartment używając wybranej kolekcji
@@ -11,54 +13,103 @@ package magzaba.com.github;
 //  4           5
 //      drzwi
 
+class Compartment {
+
 
 //zadanie 2
-// zarezerwuj miejsca dla następujących osób zgodnie z ich preferencjami:
-// Anna Walczak - przy oknie
-// Robert Walczak - naprzeciwko żony
-// Adam Walczak - obok mamy
-// Krzysztof Wilczek - przy drzwiach
-// Każda rezerwacja potwierdzona informacją: "Zarezerwowano miejsce <nr> dla <pasażer>"
-// Na koniec zrób podsumowanie - podaj listę pasażerów wraz miejscem, które zajmują
+    // zaimplemetuj metodę bookSeat() uwzględniając trzy warianty:
+    // miejsce jest dostępne
+    // miejsce jest zajęte
+    // brak wolnych miejsc
+
+    /**
+     * Books a chosen seat and confirms reservation,  denies if not possible
+     *
+     * @param passenger
+     * @param preferences
+     * @return different messages depending on the seat availability
+     * @see BookingMessage
+     */
+    String bookSeat(Passenger passenger, Preferences preferences) {
+
+        return "";
+    }
 
 
 //zadanie 3
-// spróbuj dokonać kolejnych rezerwacji:
-// Piotr Kos - przy oknie
-// Anna Duka - przy drzwiach
-// Jan Duka - przy drzwiach
-// Olaf Stano - bez preferencji
-// Kinga Stano - bez preferencji
-// Bartosz Kita - bez preferencji
-// Stefan Chudy - bez preferencji
-// Karol Młot - bez preferencji
-// Odmów klientowi rezerwacji miejsca niedostępnego - wyświetl mu listę miejsc dostępnych
-// Po przekroczeniu limitu miejsc w przedziale wyświetl informację "Przykro nam, brak miejsc w przedziale"
+    // tworzenie raportów w formie listy Stringów - raporty mają wypisać:
+    //  miejsca wolne
+    // miejsca zajęte
+    // lista pasażerów z miejscem przez nich zarezerwowanym
+    // listy powinny być posortowane w kolejności zgodnej z numeracją miejsc, tj. od miejsca 1 do 8
 
+    /**
+     * @return list of available seats in ascending seat number order
+     */
+    List<String> listAvailable() {
+        return Collections.emptyList();
+    }
 
-class SeatReservation {
+    /**
+     * @return list of reserved seats in ascending seat number order
+     */
+    List<String> listReserved() {
+        return Collections.emptyList();
+    }
 
+    /**
+     * @return list of passengers with booked seats in ascending order of seat numbers
+     */
+    List<String> listPassengers() {
+        return Collections.emptyList();
+    }
+}
+
+enum BookingMessage {
+    SUCCESSFUL("Successfull booking"), UNAVAILABLE("Chosen seat unavailable"), OVERLOADED("No free seats in this compartment");
+    private final String message;
+
+    BookingMessage(String message) {
+        this.message = message;
+    }
+
+    @Override
+    public String toString() {
+        return message;
+    }
 }
 
 
-class Seat {
+enum Preferences {
+    WINDOW, DOOR, UNSPECIFIED
+}
 
-    enum Position {
-        WINDOW, DOOR, UNSPECIFIED
-    }
 
-    private Position position;
+class Seat implements Comparable<Seat> {
+
+    private Preferences preferences;
     private int number;
 
-    public Seat(Position position, int number) {
-        this.position = position;
+    public Seat(int number, Preferences preferences) {
         this.number = number;
+        this.preferences = preferences;
+
+    }
+
+    @Override
+    public String toString() {
+        return "seat number:" + number + ", " + preferences.toString();
+    }
+
+    public int compareTo(Seat seat) {
+        return Integer.compare(number, seat.number);
+    }
+
+    public Preferences checkLocation() {
+        return preferences;
     }
 }
 
-class Compartment {
-
-}
 
 class Passenger {
     String name;

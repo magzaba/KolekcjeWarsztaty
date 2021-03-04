@@ -1,6 +1,6 @@
 = Collections Workshops
 
-Introductory level workshop.
+Introductory level workshop. Everything is in one file, run it with `java Compartment.java`
 
 == General info
 

@@ -18,7 +18,9 @@ TIP: For details of the task see *Compartment.java*
 [TIP]
 .Hints
 ====
-It is recommended that you read all the tasks before implementing, as this may determine your collection selection.
+IMPORTANT: It is recommended that you read all the tasks before implementing, as this may determine your collection selection.
+
+TIP: open Javadocs for the compartment class via `Ctrl+q` in Intellij, and dock the opened window. Renders as HTML and you won't have to scroll up and down while coding, as long as you don't click on something else where the docked view will change to that thing. If you dislike it, take a look at `jd.sh` script and try running that.
 
 For further details see:
 

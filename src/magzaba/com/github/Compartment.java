@@ -3,24 +3,24 @@ package magzaba.com.github;
 import java.util.Collections;
 import java.util.List;
 
-//zadanie 1
-// zaimplementuj klasę Compartment używając wybranej kolekcji
-// miejsca w przedziale ponumerowane są następująco:
-//      okno
-//  1           8
-//  2           7
-//  3           6
-//  4           5
-//      drzwi
+/* TODO: zadanie 1
+ zaimplementuj klasę Compartment używając wybranej kolekcji
+ miejsca w przedziale ponumerowane są następująco:
+      okno
+  1           8
+  2           7
+  3           6
+  4           5
+      drzwi*/
 
 class Compartment {
 
 
-//zadanie 2
-    // zaimplemetuj metodę bookSeat() uwzględniając trzy warianty:
-    // miejsce jest dostępne
-    // miejsce jest zajęte
-    // brak wolnych miejsc
+/* TODO: zadanie 2
+    zaimplemetuj metodę bookSeat() uwzględniając trzy warianty:
+    miejsce jest dostępne
+    miejsce jest zajęte
+    brak wolnych miejsc*/
 
     /**
      * Books a chosen seat and confirms reservation,  denies if not possible
@@ -36,12 +36,12 @@ class Compartment {
     }
 
 
-//zadanie 3
-    // tworzenie raportów w formie listy Stringów - raporty mają wypisać:
-    //  miejsca wolne
-    // miejsca zajęte
-    // lista pasażerów z miejscem przez nich zarezerwowanym
-    // listy powinny być posortowane w kolejności zgodnej z numeracją miejsc, tj. od miejsca 1 do 8
+/* TODO: zadanie 3
+    tworzenie raportów w formie listy Stringów - raporty mają wypisać:
+      miejsca wolne
+     miejsca zajęte
+     lista pasażerów z miejscem przez nich zarezerwowanym
+     listy powinny być posortowane w kolejności zgodnej z numeracją miejsc, tj. od miejsca 1 do 8*/
 
     /**
      * @return list of available seats in ascending seat number order

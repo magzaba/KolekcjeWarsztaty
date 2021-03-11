@@ -1,27 +1,29 @@
 import java.util.Collections;
 import java.util.List;
+import java.util.TreeMap;
 
 /**
  * TODO: all the tasks
  *
  * <h2>task 1 - implement Compartment class</h2>
- * Implement Compartment class using a chosen collection.
+ * Implement Compartment class using TreeMap.
+ * You can add constructors, fields, methods as needed
  * Compartment seats are numbered as illustrated below:
  * <pre>
-      window
-  1           8
-  2           7
-  3           6
-  4           5
-      door
-</pre>
+ * window
+ * 1           8
+ * 2           7
+ * 3           6
+ * 4           5
+ * door
+ * </pre>
  * <br/>
  * <h2>task 2 - implement bookSeat() method</h2>
  * Implement Compartment#bookSeat() method considering 3 variants:
  * <li>place is taken</li>
  * <li>place is free</li>
  * <li>no available places</li>
- * 
+ * <p>
  * <br/>
  * <h2>task 3 - reporting time!</h2>
  * Create reports as a list of strings. Reports are to contain:
@@ -29,10 +31,9 @@ import java.util.List;
  * <li>all taken places</li>
  * <li>list of passengers with places they've reserved</li>
  * All lists should be sorted ascendingly per seat numbers (1-8).
- *
-*/
+ */
 class Compartment {
-
+    private TreeMap<Seat, Passenger> seats;
 
     /**
      * Books a chosen seat and confirms reservation,  denies if not possible
@@ -49,10 +50,9 @@ class Compartment {
     }
 
 
-
     /**
-     * @see Compartment - task 3 - not before
      * @return list of available seats in ascending seat number order
+     * @see Compartment - task 3 - not before
      */
     List<String> listAvailable() {
         return Collections.emptyList();

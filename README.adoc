@@ -1,12 +1,13 @@
 = Collections Workshops
 
 Introductory level workshop. Everything is in one file, run it with `java Compartment.java`
+The main aim is to explore `TreeMap<K,V>`
 
 == General info
 
 The task concerns the reservation of seats in the train compartment:
 
-. start by choosing the collection that you will use for the implementation
+. start by implementing _Compartment_ class using _TreeMap_
 . perform basic operations on that collection to solve the tasks
 
 TIP: For details of the task see *Compartment.java*
